@@ -55,26 +55,26 @@
             const fredtunLat = 59.1577701;
             const fredtunLong = 5.2953584;
 
-            // if (
-            //     haversineDistance(
-            //         coordinates.lat,
-            //         coordinates.long,
-            //         fredtunLat,
-            //         fredtunLong
-            //     ) > 1
-            // ) {
-            //     errorMessage =
-            //         "Det ser ut til at du ikke befinner deg på Fredtun. Du må være på Fredtun for å sjekke inn.";
-            //     return;
-            // }
-
-            const skudeLat = 59.1551409;
-            const skudeLong = 5.25712;
-
-            if(haversineDistance(coordinates.lat, coordinates.long, skudeLat, skudeLong) > 1) {
-                errorMessage = "Du er ikke hjemme";
+            if (
+                haversineDistance(
+                    coordinates.lat,
+                    coordinates.long,
+                    fredtunLat,
+                    fredtunLong
+                ) > 1
+            ) {
+                errorMessage =
+                    "Det ser ut til at du ikke befinner deg på Fredtun. Du må være på Fredtun for å sjekke inn.";
                 return;
             }
+
+            // const skudeLat = 59.1551409;
+            // const skudeLong = 5.25712;
+
+            // if(haversineDistance(coordinates.lat, coordinates.long, skudeLat, skudeLong) > 1) {
+            //     errorMessage = "Du er ikke hjemme";
+            //     return;
+            // }
 
             const checkinResponse = await fetch(
                 "https://oleeskild-fredtun-checkin.builtwithdark.com/checkin",
