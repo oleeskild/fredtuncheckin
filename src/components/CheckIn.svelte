@@ -96,7 +96,7 @@
     style="width: 80%; max-width: 500px; display: flex; align-items: center; flex-direction: column; text-align: center;"
 >
     {#if errorMessage}
-        <div>
+        <div style="margin: 10px;">
             {errorMessage}
         </div>
     {/if}
