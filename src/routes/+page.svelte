@@ -3,9 +3,12 @@
 </script>
 
 <div
-    style="height: 100vh; display: flex; justify-content: center; align-items: center; flex-direction: column"
+    style="height: 90vh; display: flex; justify-content: center; align-items: center; flex-direction: column"
 >
-    <h1>Sjekk inn hos Fredtun</h1>
+<div>
+
+    <h1 style="margin-bottom: 40px">Sjekk inn hos Fredtun</h1>
     <CheckIn />
 
+</div>
 </div>

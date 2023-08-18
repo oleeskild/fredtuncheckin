@@ -93,10 +93,11 @@
 </script>
 
 <div
-    style="width: 80%; max-width: 500px; display: flex; align-items: center; flex-direction: column; text-align: center;"
+    style="width: 500px; display: flex; align-items: center; flex-direction: column;"
 >
     {#if errorMessage}
-        <div style="margin: 10px;">
+        <div
+            style="margin-bottom: 20px; font-size: 22px; color: #e28383; font-weight: 600;">
             {errorMessage}
         </div>
     {/if}
@@ -105,14 +106,21 @@
         <h2>Hei {name} 😄</h2>
         <h3>Du er nå sjekket inn for idag 🎉</h3>
     {:else}
-        <input
-            style="width: 100%; "
-            type="text"
-            bind:value={name}
-            placeholder="Skriv inn hele navnet ditt"
-        />
-        <button style="width: 100%;  font-weight: 600" on:click={checkIn}
+        <form action="" method="get" style="width: 100%; display: flex; flex-direction:column">
+            <label 
+                    style="width: 100%; font-size: 22px; text-align: start; font-weight:600">
+                Hva heter du?
+                <input
+                    required
+                    style="margin-top: 10px; font-size: 32px;"
+                    type="text"
+                    bind:value={name}
+                    placeholder="Skriv hele navnet ditt"
+                />
+            </label>
+        <button type="submit" style="font-weight: 600; width: fit-content;" on:click={checkIn}
             >SJEKK INN</button
         >
+        </form>
     {/if}
 </div>
