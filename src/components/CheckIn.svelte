@@ -112,7 +112,7 @@
                 Hva heter du?
                 <input
                     required
-                    style="margin-top: 10px; font-size: 32px;"
+                    style="margin-top: 10px; font-size: 32px; max-width: 85vw;"
                     type="text"
                     bind:value={name}
                     placeholder="Skriv hele navnet ditt"
