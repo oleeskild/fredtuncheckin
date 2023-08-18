@@ -93,7 +93,7 @@
 </script>
 
 <div
-    style="width: 500px; display: flex; align-items: center; flex-direction: column;"
+    style="width: 500px; max-width: 90vw; display: flex; align-items: center; flex-direction: column;"
 >
     {#if errorMessage}
         <div
